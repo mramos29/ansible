@@ -7,4 +7,3 @@ To build the Wordpress server, edit hosts file and replace worpress_server_ip wi
 To run the playbook, just type
 
 	ansible-playbook playbook.yml -i hosts -u <username> --ssh-extra-args="-i <ssh key location>" 	
-

@@ -10,6 +10,10 @@
   unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
   become: yes
 
+- name: Create wp-config.php
+  copy: src=/var/www/wordpress/wp-config-sample.php dest=/var/www/wordpress/wp-config.php remote_src=yes
+  become: yes
+
 - name: Update default Apache site
   become: yes
   lineinfile: 
